@@ -1,0 +1,10 @@
+public/main.js
+target/
+node_modules
+
+# IDE/editor
+.bloop/
+.bsp/
+.metals/
+project/.bloop
+project/project/.bloop

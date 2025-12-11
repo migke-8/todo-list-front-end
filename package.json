@@ -1,0 +1,10 @@
+{
+  "name": "scalajs-frontend",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "serve public"
+  },
+  "devDependencies": {
+    "serve": "^14.2.5"
+  }
+}
