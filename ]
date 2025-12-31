@@ -8,11 +8,11 @@ import org.scalajs.dom.webgl.ShaderPrecisionFormat
   val button = document.getElementById("button").asInstanceOf[HTMLButtonElement]
   val scoreElement = document.getElementById("score")
   val shopList = document.getElementById("shop-list")
-  val shopItems = Array(ShopItem("double gain", 10))
+  val shopItems = Array(ShopItem("double gain"))
   var scoreModifier = 1
   var score = 0
 
-  shopList.append(shopItems.map(toItemElement)*)
+  shopList.append(shopItems.map(toItemElement))
   button.onclick = { (e) =>
     val buttonBox = button.getBoundingClientRect()
     button.style.left =
@@ -29,7 +29,7 @@ import org.scalajs.dom.webgl.ShaderPrecisionFormat
 case class ShopItem(name: String, price: Int, var multiplier: Int = 1)
 def toItemElement(item: ShopItem) = {
   val element = document.createElement("li")
-  element.innerText = s"${item.name}: ${item.price*item.multiplier}" + "$"
+  element.innerText = s"${item.name}: ${item.price}"+"$"
   element
 }
 def getCountJuice(number: Int, x: Double, y: Double) = {
